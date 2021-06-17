@@ -311,8 +311,8 @@ void Audio_Mix() {
 // 	mov ax, [es:active_sounds + si + 3] ; sound segment
 // 	mov ds, ax
 // 	mov di, [es:active_sounds + si + 1] ; sound offset
-// 	mov ah, 0
-// 	mov al, [ds:di + bx] ; get sound byte sample
+	// 	mov ah, 0
+	// 	mov al, [ds:di + bx] ; get sound byte sample
 // 	add dx, ax
 // 	sub dx, 127 ; mixed_sample = sample_a + sample_b - 127
 // 	;mov dx, ax
@@ -390,9 +390,7 @@ void Audio_Init() {
 	Log("Sound Blaster found at A%x I%u D%i", s_SBBase, s_SBIRQ, s_SBDMA);
 
 	sbInit();
-	//sbSinglePlay("assets/audio/niggers.wav");
 	//sbSinglePlay("assets/audio/step1a.wav");
-	//Audio_LoadWAV("assets/audio/niggers.wav");
 
 	sbSinglePlay(0);
 
